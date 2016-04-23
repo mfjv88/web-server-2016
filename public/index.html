@@ -1,33 +1,217 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Javascript Tutorial</title>
-  <link rel="stylesheet" href="assets/css/bootstrap.css">
-  <link rel="stylesheet" href="assets/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="assets/css/app.css">
+  <meta charset="utf-8">
+  <title>Lazarus the Game</title>
   <script type="text/javascript" src="assets/js/jquery.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.js"></script>
-  <script type="text/javascript" src="assets/js/app.js"></script>
+  <script type="text/javascript" src="assets/js/typeit.js"></script>
+  <script type="text/javascript" src="assets/js/typeit.min.js"></script>
+  <script type="text/javascript" src="assets/js/finalproject.js"></script>
+  <script type="text/javascript" src="assets/js/mousetrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/mousetrap-bind-dictionary.min.js"></script>
+  <link rel="icon" href="assets/images/lazarusfav.png" type="image/x-icon" />
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/finalproject.css">
 </head>
+
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-          <img alt="Brand" src="assets/images/logo.png">
-        </a>
+  <div class="container-fluid">
+    <div id="nav" class="row">
+      <div id="logo" class="col-xs-2 col-md-2 col-lg-1">
+        <span><img src="assets/images/lazarus-Recovered.png" alt="lazaruslogo" height="40px" /></span>
       </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#" id="home">Home</a></li>
-          <li><a href="#" id="about">About</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
+      <div class="col-xs-2 col-xs-offset-4 col-md-1 col-md-offset-7 col-lg-offset-8 nav-items">
+        <span>Sign in</span>
+      </div>
+      <div class="col-xs-2 col-md-1 col-lg-1 nav-items">
+        <span>About Us</span>
+      </div>
+      <div class="col-xs-2 col-md-1 nav-items">
+        <img id="speaker" src="assets/images/speaker.png" alt="speaker" height="30px" />
+        <img id="speakermute" src="assets/images/speakermute.png" alt="speakermute" height="30px" />
+      </div>
     </div>
-  </nav>
-  <div class="container">
-    <!-- Container -->
   </div>
+  <div id="main" class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-lg-offset-3 frame">
+        <!--Here starts the grid system-->
+        <div id="grid" class="row">
+          <div id="graphics" class="col-xs-12 col-sm-6 frame main-boxes">
+            <!--Row 1 in Area-->
+            <div class="row">
+              <div class="col-xs-2" id="tile00"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile01"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile02"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile03"> <img src="assets\images\BlueSwordSoldier.png" alt="Orc" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile04"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile05"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+            </div>
+            <!--Row 2 in Area-->
+            <div class="row">
+              <div class="col-xs-2" id="tile10"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile11"> <img src="assets\images\GreenSwordSoldier.png" alt="Goblin" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile12"> <img src="assets\images\floor.png" alt="tile" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile13"> <img src="assets\images\floor.png" alt="tile" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile14"> <img src="assets\images\floor.png" alt="tile" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile15"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+            </div>
+            <!--Row 3 in Area-->
+            <div class="row">
+              <div class="col-xs-2" id="tile20"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile21"> <img src="assets\images\floor.png" alt="tile" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile22"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile23"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile24"> <img src="assets\images\GreenSwordSoldier.png" alt="Goblin" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile25"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+            </div>
+            <!--Row 4 in Area-->
+            <div class="row">
+              <div class="col-xs-2" id="tile30"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile31"> <img src="assets\images\floor.png" alt="tile" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile32"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile33"> <img src="assets\images\Boulder.png" alt="boulder" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile34"> <img src="assets\images\floor.png" alt="tile" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile35"> <img src="assets\images\floor.png" alt="tile" width="40px" />
+              </div>
+            </div>
+            <br>
+            <!--Row 5 in Area-->
+            <div class="row">
+              <div class="col-xs-2" id="tile40"> <img src="assets\images\link.gif" alt="hero" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile41"> <img src="assets\images\floor.png" alt="tile" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile42"> <img src="assets\images\floor.png" alt="tile" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile43"> <img src="assets\images\floor.png" alt="tile" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile44"> <img src="assets\images\floor.png" alt="tile" width="40px" />
+              </div>
+              <div class="col-xs-2" id="tile45"> <img src="assets\images\floor.png" alt="tile" width="40px" />
+              </div>
+            </div>
+          </div>
+          <!-- Here is the prompt-->
+          <div id="prompt" class="col-xs-12 col-sm-6 frame main-boxes">
+            <div placeholder="Here go action messages...">
+            </div>
+          </div>
+        </div>
+        <!--Here are the controls-->
+        <div id="controls" class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 frame">
+              <div class="row">
+                <div class="col-xs-1 col-xs-offset-5">
+                  <button id="up" type="button" class="btn btn-primary btn-lg active" name="button" onclick="move('up')">⇧</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-1 col-xs-offset-3">
+                  <button id="left" type="button" class="btn btn-primary btn-lg active" name="button" onclick="move('left')">⇦</button>
+                </div>
+                <div class="col-xs-1 col-xs-offset-3">
+                  <button id="right" type="button" class="btn btn-primary btn-lg active" name="button" onclick="move('right')">⇨</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-1 col-xs-offset-5">
+                  <button id="down" type="button" class="btn btn-primary btn-lg active" name="button" onclick="move('down')">⇩</button>
+                </div>
+              </div>
+              <br>
+              <div class="attacking row">
+                <div class="col-xs-1">
+                  <button type="button" id="battle" class="btn btn-primary btn-lg active" name="button" onclick="fight()">Battle</button>
+                </div>
+                <div class="col-xs-1 col-xs-offset-2">
+                  <button type="button" id="flee" class="btn btn-primary btn-lg active" name="button" onclick="flee()">Flee</button>
+                </div>
+                <div class="col-xs-1 col-xs-offset-2">
+                  <button type="button" id="attack" class="btn btn-primary btn-lg active" name="button" onclick="">Attack</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-11 col-xs-offset-1">
+            <span id="instructions"> ⬑ Use the buttons to move character </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id='footer' class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <span id="copyright"> I do not own any of the copyright material on this page.
+      </div>
+    </div>
+    <div id="footer-bar" class="row">
+      <div class="col-xs-5 col-lg-3">
+        <span>This is a project for and made thanks to the help of <br> <a href="http://www.codetrotters.com" target="_blank" class="footerItems"> <img src="assets/images/codeTrotters.png" alt="codetrotters" height="40px"/> </a> </span>
+      </div>
+      <div class="col-xs-1 col-xs-offset-3 col-lg-1 col-lg-offset-6">
+        <a href="http://twitter.com/mfjv88" class="footerItems" target="_blank"><img src="assets/images/Twitterbird.png" alt="twitter" height="40px" /> </a>
+      </div>
+      <div class="col-xs-1 col-lg-1">
+        <a href="http://github.com/mfjv88" class="footerItems" target="_blank"><img src="assets/images/github.png" alt="github" height="40px" /> </a>
+      </div>
+      <div class="col-xs-2 col-lg-1">
+        <span id="contact"><a href="mailto:mfjvacas@gmail.com">Contact us!</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Do you want to play?</h4>
+        </div>
+        <div class="modal-body">
+          <span class="type-it"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="close" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary play">Play!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>

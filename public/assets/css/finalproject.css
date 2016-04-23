@@ -1,0 +1,104 @@
+body{
+  background-color: black;
+}
+
+.frame {
+  border: double;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#main {
+  padding-top: 4%;
+}
+
+#grid {
+  float: none;
+  height: 100%;
+}
+
+#prompt {
+overflow-y: scroll;
+}
+
+.main-boxes {
+  height: 296px;
+}
+
+#nav {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: white;
+  height: 40px;
+  padding: 0px;
+}
+
+#logo {
+  display: flex;
+  justify-content: flex-start;
+  float: left;
+  padding: 0px;
+}
+
+.nav-items {
+  padding-top: 10px;
+}
+
+#speaker {
+  padding: 0px;
+}
+
+#speakermute {
+  padding: 0px;
+}
+
+#graphics {
+  padding: none;
+}
+
+#controls {
+  float: none;
+  padding: 0px;
+}
+
+#instructions {
+  color: white;
+  font-size: 18px;
+}
+
+#footer {
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+#footer-bar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 0, 0, 0.5);
+  font-size: 18px;
+  height: 80px;
+}
+
+#footer a:link {
+  text-decoration: none;
+  color: white;
+}
+
+#footer > div > span > a:hover, a:visited {
+  color: grey;
+}
+
+.footerItems {
+  font-size: 20px;
+  bottom: 5px;
+  padding-top: 10px;
+}
+
+#tile {
+  padding: 5px;
+}
+
+.type-it {
+  font-size: 24px;
+  font-family: sans-serif;
+}
