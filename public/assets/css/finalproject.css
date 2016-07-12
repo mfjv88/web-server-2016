@@ -2,13 +2,17 @@ body{
   background-color: black;
 }
 
+body, a:active, a:hover {
+  color: grey !important;
+}
+
 .frame {
   border: double;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 #main {
-  padding-top: 4%;
+  padding-top: 1.5%;
 }
 
 #grid {
@@ -66,25 +70,51 @@ overflow-y: scroll;
 
 #footer {
   color: white;
-  position: fixed;
-  bottom: 0px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.5);
+  font-size: 18px;
+  height: 18%;
   width: 100%;
 }
 
-#footer-bar {
-  display: flex;
-  align-items: center;
-  background-color: rgba(255, 0, 0, 0.5);
-  font-size: 18px;
-  height: 80px;
+@media screen, (min-width: 769px) and (max-width: 992px){
+  #footer{
+    position: absolute;
+    bottom: 0px !important;
+  }
+  #codetrotters{
+    margin: 10px;
+  }
 }
 
-#footer a:link {
+@media screen and (max-width: 768px) {
+  #footer {
+    position: inherit;
+  }
+  #main {
+    padding-top: 0;
+  }
+  #codetrotters{
+    margin: 10px;
+  }
+  #instructions {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+#footer a:link, a:visited {
   text-decoration: none;
   color: white;
 }
 
-#footer > div > span > a:hover, a:visited {
+#footer > div > span > a:hover {
   color: grey;
 }
 
