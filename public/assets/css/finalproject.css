@@ -105,7 +105,7 @@ a:visited {
     padding-top: 0;
   }
   #codetrotters{
-    margin: 10px;
+    margin: 10px auto auto auto;
   }
   #instructions {
     margin-bottom: 10px;
@@ -138,7 +138,7 @@ and (orientation : portrait) {
 
 @media only screen, (min-width: 769px) and (max-width: 992px){
   #codetrotters{
-    margin: 10px;
+    margin: 10px auto auto auto;  
   }
   #projectmade{
     text-align: center;
