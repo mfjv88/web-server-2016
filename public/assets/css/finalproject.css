@@ -35,6 +35,13 @@ overflow-y: scroll;
   padding: 0px;
 }
 
+.flexing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 #logo {
   display: flex;
   justify-content: flex-start;
@@ -68,7 +75,13 @@ overflow-y: scroll;
   font-size: 18px;
 }
 
+a:visited {
+  color: white;
+}
+
 #footer {
+  position: absolute;
+  bottom: 0;
   color: white;
   text-align: center;
   display: flex;
@@ -82,19 +95,11 @@ overflow-y: scroll;
   width: 100%;
 }
 
-@media screen, (min-width: 769px) and (max-width: 992px){
-  #footer{
-    position: absolute;
-    bottom: 0px !important;
-  }
-  #codetrotters{
-    margin: 10px;
-  }
-}
-
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   #footer {
-    position: inherit;
+    position: relative !important;
+    bottom: 0px !important;
+    margin-top: 18%;
   }
   #main {
     padding-top: 0;
@@ -105,9 +110,44 @@ overflow-y: scroll;
   #instructions {
     margin-bottom: 10px;
   }
+  #projectmade {
+    text-align: center !important;
+  }
 }
 
+@media only screen
+and (min-device-width : 769px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  #footer{
+    position: absolute !important;
+    bottom: 0px !important;
+  }
+}
 
+@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation : landscape){
+  #footer {
+    height: 200px !important;
+    position: inherit;
+    bottom: 0px !important;
+  }
+  #footer-bar{
+    flex-wrap: nowrap !important;
+  }
+}
+
+@media only screen, (min-width: 769px) and (max-width: 992px){
+  #codetrotters{
+    margin: 10px;
+  }
+  #projectmade{
+    text-align: center;
+  }
+}
+
+#projectmade {
+  text-align: left;
+}
 
 #footer a:link, a:visited {
   text-decoration: none;
