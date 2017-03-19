@@ -47,3 +47,10 @@ $RECYCLE.BIN/
 
 # Node
 /node_modules
+
+# Gulp
+gulpfile.js
+postcss.config.js
+
+# Gulp before
+public/assets/css/finalproject.css
