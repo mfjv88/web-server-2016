@@ -13,7 +13,7 @@ body, a:active, a:hover {
 
 #main {
   padding-top: 1.5%;
-  margin-bottom: 15vh;
+  margin-bottom: 13vh;
 }
 
 #grid {
@@ -34,11 +34,6 @@ overflow-y: scroll;
   color: white;
   height: 40px;
   padding: 0px;
-}
-
-.nav-items span > a {
-  text-decoration: none;
-  color: white;
 }
 
 .flexing {
@@ -93,7 +88,7 @@ a:visited {
   font-size: 18px;
   height: 18%;
   width: 100%;
-  padding: 15px 10px;
+  padding: 15px 0;
 }
 
 #footer-bar {

@@ -13,6 +13,7 @@ body, a:active, a:hover {
 
 #main {
   padding-top: 1.5%;
+  margin-bottom: 15vh;
 }
 
 #grid {
@@ -33,6 +34,11 @@ overflow-y: scroll;
   color: white;
   height: 40px;
   padding: 0px;
+}
+
+.nav-items span > a {
+  text-decoration: none;
+  color: white;
 }
 
 .flexing {
@@ -80,37 +86,35 @@ a:visited {
 }
 
 #footer {
-  position: absolute;
-  bottom: 0;
   color: white;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   background-size: cover;
   background-color: rgba(255, 0, 0, 0.5);
   font-size: 18px;
   height: 18%;
   width: 100%;
+  padding: 15px 10px;
+}
+
+#footer-bar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 @media only screen and (max-width: 768px) {
-  #footer {
-    position: relative !important;
-    bottom: 0px !important;
-    margin-top: 18%;
-  }
   #main {
     padding-top: 0;
   }
   #codetrotters{
-    margin: 10px;
+    margin: 10px auto auto auto;
   }
   #instructions {
     margin-bottom: 10px;
   }
   #projectmade {
+    padding-bottom: 20px;
     text-align: center !important;
   }
 }
@@ -138,7 +142,7 @@ and (orientation : portrait) {
 
 @media only screen, (min-width: 769px) and (max-width: 992px){
   #codetrotters{
-    margin: 10px;
+    margin: 10px auto auto auto;
   }
   #projectmade{
     text-align: center;
